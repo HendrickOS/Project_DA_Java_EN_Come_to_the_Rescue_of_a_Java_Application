@@ -6,6 +6,8 @@ import java.io.FileWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 
 public class AnalyticsCounter {
 
@@ -42,8 +44,11 @@ public class AnalyticsCounter {
 		FileWriter writer = new FileWriter("result.out");
 
 		// Affichage du dictionnaire
+
+		Map triSymptom = new TreeMap(mapSymptom); // Tri du dictionnaire avec TreeMap
+		Set set = triSymptom.entrySet();
 		System.out.println("Affichage des clés, valeurs de notre dictionnaire : ");
-		Iterator iterator = mapSymptom.entrySet().iterator();
+		Iterator iterator = set.iterator();
 		while (iterator.hasNext()) {
 			Map.Entry mapentry = (Map.Entry) iterator.next();
 			System.out.println("clé : " + mapentry.getKey() + " / valeur : " + mapentry.getValue());
