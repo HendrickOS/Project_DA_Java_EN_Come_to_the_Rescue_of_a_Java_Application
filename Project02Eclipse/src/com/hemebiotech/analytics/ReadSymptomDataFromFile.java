@@ -14,6 +14,10 @@ import java.util.TreeMap;
  * Simple brute force implementation
  *
  */
+/**
+ * @author heos9
+ *
+ */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	private String filepath;
@@ -56,6 +60,11 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		return mapSymptom;
 	}
 
+	/**
+	 * @param resultFileName Vide, doit contenir la liste des symptomes par ordre
+	 *                       alphabétique ainsi que leur nombre d'occurrence après
+	 *                       exécution de la méthode
+	 */
 	public void saveResult(String resultFileName) {
 		FileWriter writer;
 		try {
